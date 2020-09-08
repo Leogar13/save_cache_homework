@@ -47,7 +47,7 @@ app.get('/products/:id', async (req, res) => {
     }
 
 
-    if(requests>=5 && idCompared==id && timer.getTime()<='2:00' ||timer.getTime()>'2:00'){
+    if(requests>=5 && idCompared==id && timer.getTime()<='2:00'){
         console.log('getting data from cache');
         client.get(id,(err,val)=>{
            res.send(val);
